@@ -3,7 +3,7 @@ const { BelongsToOneRelation } = require('objection')
 
 class Post extends BaseModel {
   static get tableName() {
-    return 'posts'
+    return 'hobbies'
   }
 
   static get relationMappings() {
@@ -14,7 +14,7 @@ class Post extends BaseModel {
         relation: BelongsToOneRelation,
         modelClass: User,
         join: {
-          from: 'posts.userId',
+          from: 'hobbies.userId',
           to: 'users.id',
         },
       },
